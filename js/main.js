@@ -44,4 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     tbody.appendChild(tr);
   });
+
+  const inputColumn = document.querySelector('#column');
+  inputColumn.addEventListener('input', function (e) {
+    console.log(e.target.value);
+  });
 });
