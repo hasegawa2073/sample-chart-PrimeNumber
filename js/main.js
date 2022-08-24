@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const tdArray = [];
   const newTdArray = [];
-  const max = 1000;
+  const max = 10000;
   const column = 10;
   for (let i = 1; i <= max; i++) {
     const td = document.createElement('td');
