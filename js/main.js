@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     tdArray.push(td);
     // 行単位でtdをnewTdArrayへ
     if (tdArray.length % column === 0) {
-      const row = tdArray.slice(i - 10, i + column);
+      const row = tdArray.slice(i - column, i + column);
       newTdArray.push(row);
     }
   }
