@@ -5,7 +5,7 @@ html {
   --gray: #3d3d3d;
   --base-color: #707070;
   --border-color: #cccccc;
-  --input-font-size: clamp(1.6rem, 2vw, 2rem);
+  --input-font-size: 2vw;
   --content-padding: 0 5%;
 }
 body {
@@ -17,7 +17,7 @@ body {
 
 .title {
   margin: 64px 0 40px;
-  font-size: clamp(3.6rem, 3vw, 4rem);
+  font-size: 3vw;
   text-align: center;
   color: var(--gray);
 }
@@ -44,12 +44,16 @@ body {
   font-size: var(--input-font-size);
   color: var(--gray);
 }
+.range {
+  width: 10vw;
+  cursor: pointer;
+}
 .label {
   font-size: var(--input-font-size);
   color: var(--gray);
 }
 .small {
-  font-size: 1.4rem;
+  font-size: 1.4vw;
 }
 .input {
   padding: 6px 10px;
