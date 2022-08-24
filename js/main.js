@@ -19,9 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  const tr = document.createElement('tr');
-  tr.classList.add('tr');
-
   const tdArray = [];
   const newTdArray = [];
   const max = 1000;
@@ -29,10 +26,22 @@ document.addEventListener('DOMContentLoaded', function () {
   for (let i = 1; i <= max; i++) {
     const td = document.createElement('td');
     td.textContent = i;
+    if (primeJudge(i)) {
+      td.classList.add('primeNumber');
+    }
     tdArray.push(td);
+    // 行単位でtdをnewTdArrayへ
     if (tdArray.length % column === 0) {
       const row = tdArray.slice(i - 10, i + column);
       newTdArray.push(row);
     }
   }
+  newTdArray.forEach((row) => {
+    const tr = document.createElement('tr');
+    tr.classList.add('tr');
+    for (let i = 0; i < row.length; i++) {
+      tr.appendChild(row[i]);
+    }
+    tbody.appendChild(tr);
+  });
 });
