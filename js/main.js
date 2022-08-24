@@ -29,36 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 
-  const initChart = () => {
-    const tdArray = [];
-    const newTdArray = [];
-    const newTbody = document.createElement('tbody');
-    newTbody.classList.add('tbody');
-    for (let i = 1; i <= max; i++) {
-      const td = document.createElement('td');
-      td.textContent = i;
-      if (primeJudge(i)) {
-        td.classList.add('primeNumber');
-      }
-      tdArray.push(td);
-      // 行単位でtdをnewTdArrayへ
-      if (tdArray.length % column === 0) {
-        const row = tdArray.slice(i - column, i + column);
-        newTdArray.push(row);
-      }
-    }
-    newTdArray.forEach((row) => {
-      const tr = document.createElement('tr');
-      tr.classList.add('tr');
-      for (let i = 0; i < row.length; i++) {
-        tr.appendChild(row[i]);
-      }
-      newTbody.appendChild(tr);
-      table.appendChild(newTbody);
-    });
-  };
-  initChart();
-
   const createChart = () => {
     const tdArray = [];
     const newTdArray = [];
@@ -85,6 +55,8 @@ document.addEventListener('DOMContentLoaded', function () {
       tbody.appendChild(tr);
     });
   };
+
+  createChart();
 
   const inputColumn = document.querySelector('#column');
   inputColumn.addEventListener('change', function (e) {
