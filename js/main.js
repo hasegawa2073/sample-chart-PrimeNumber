@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (num % i === 0) {
           return false;
         }
-        return true;
+        if (i + 1 === num) {
+          return true;
+        }
       }
     }
   };
