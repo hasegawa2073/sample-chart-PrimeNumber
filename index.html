@@ -16,7 +16,7 @@
   <body>
     <h1 class="title">素数の表</h1>
     <div class="input-area zoom">
-      <p class="text">表の大きさ</p>
+      <p class="text">表のサイズ</p>
       <label class="label small" for="range">小さく</label>
       <input
         type="range"
@@ -29,8 +29,11 @@
       <label class="label large" for="range">大きく</label>
     </div>
     <div class="input-area">
-      <label class="label" for="column">何列で表示しよう? (1~1,000):</label>
+      <label class="label" for="column"
+        >何列で表示しよう? (1~<span id="max"></span>):</label
+      >
       <input class="input" type="number" id="column" min="1" max="1000" />
+      <label class="label" for="column">列</label>
     </div>
     <section class="chart-field">
       <table class="table">

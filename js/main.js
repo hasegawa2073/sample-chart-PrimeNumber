@@ -19,8 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  const max = 1000;
   let column = 10;
+  const max = 1000;
+  const maxNum = document.querySelector('#max');
+  maxNum.textContent = max;
 
   const deleteChart = () => {
     const tr = document.querySelectorAll('.tr');
@@ -70,6 +72,5 @@ document.addEventListener('DOMContentLoaded', function () {
   inputRange.addEventListener('input', function (e) {
     const scaleRatio = Number(e.target.value);
     chartField.style.transform = `scale(${scaleRatio})`;
-    console.log(scaleRatio);
   });
 });
