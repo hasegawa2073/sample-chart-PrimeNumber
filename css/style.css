@@ -5,19 +5,20 @@ html {
   --gray: #3d3d3d;
   --base-color: #707070;
   --border-color: #cccccc;
-  --input-font-size: 2vw;
+  --input-font-size: 2rem;
+  --base-font-family: 'Roboto', 'Noto Sans JP', sans-serif;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
   box-sizing: border-box;
 }
 
 .title {
   margin: 64px 0 40px;
-  font-size: 3vw;
   text-align: center;
+  font-family: var(--base-font-family);
+  font-size: 3.6rem;
   color: var(--gray);
 }
 
@@ -27,12 +28,12 @@ body {
 }
 .zoom {
   position: absolute;
-  top: 32px;
-  right: 5vw;
+  top: 0;
+  right: 0;
   margin: 0;
-  padding: 32px;
+  padding: 4vw;
   background-color: #fff;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: opacity 0.2s;
 }
 .zoom:hover {
@@ -40,27 +41,30 @@ body {
 }
 .zoom .text {
   margin: 0;
+  font-family: var(--base-font-family);
   font-size: var(--input-font-size);
   color: var(--gray);
 }
 .range {
-  width: 10vw;
+  min-width: 100px;
   cursor: pointer;
 }
 .label {
+  font-family: var(--base-font-family);
   font-size: var(--input-font-size);
   color: var(--gray);
 }
 .small {
-  font-size: 1.4vw;
+  font-size: 1.4rem;
 }
 .input {
   padding: 6px 10px;
   min-width: 80px;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  color: var(--gray);
+  font-family: var(--base-font-family);
   font-size: var(--input-font-size);
+  color: var(--gray);
 }
 
 .chart-field {
