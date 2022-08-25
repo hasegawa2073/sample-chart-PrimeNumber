@@ -6,7 +6,6 @@ html {
   --base-color: #707070;
   --border-color: #cccccc;
   --input-font-size: 2vw;
-  --content-padding: 0 5%;
 }
 body {
   margin: 0;
@@ -65,7 +64,7 @@ body {
 }
 
 .chart-field {
-  padding: var(--content-padding);
+  transform-origin: top center;
 }
 .table {
   border-collapse: collapse;

@@ -64,4 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
     deleteChart();
     createChart();
   });
+
+  const chartField = document.querySelector('.chart-field');
+  const inputRange = document.querySelector('.range');
+  inputRange.addEventListener('input', function (e) {
+    const scaleRatio = Number(e.target.value);
+    chartField.style.transform = `scale(${scaleRatio})`;
+    console.log(scaleRatio);
+  });
 });
